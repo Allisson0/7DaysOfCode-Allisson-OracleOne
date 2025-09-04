@@ -88,6 +88,7 @@ h5{
     font-weight: 50;
     font-style: normal;
     transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    border: 1px solid blue;
 }
 
 .corpo__base__botoes__botao:hover{
