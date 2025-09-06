@@ -32,15 +32,15 @@ function dirInt(){
 }
 
 function tipoValor(numero, inteiro){
-    let numeroInput = String(document.getElementById(numero).value);
+    let numeroInput = document.getElementById(numero).value;
 
-    if(numeroInput == ""){
-        return "";
+    if(numeroInput === ''){
+        return '';
     }
-
     if(inteiro == true){
         numeroInput = parseInt(numeroInput);
     }
+    
     return numeroInput;
 }
 
@@ -52,8 +52,8 @@ function trocarCor(id1, id2, cor1, cor2){
 }
 
 function verificaPreenchimento(numero1, numero2){
-    if(numero1 == "" || numero2 == ""){
-        escrever("Por favor, insira valores nos campos, antes de comparar.");
+    if(numero1 === '' || numero2 === ''){
+        escrever("Por favor, insira valores nos campos antes de comparar.");
         return false;
     }
     if(preench1 == false || preench2 == false){
@@ -86,7 +86,7 @@ function escrever(texto){
 function comparar(){
     num1 = tipoValor("num1", valorInteiro1);
     num2 = tipoValor("num2", valorInteiro2);
-
+    console.log(num1, num2);
     if(verificaPreenchimento(num1, num2)){
         escrever("");
         let comparacaoResultado = "";
