@@ -17,14 +17,15 @@
         <h2>Comparar valores para verificar suas semelhanças - mesmo tipo e/ou mesmo valor.</h2>
         <div class="corpo__escolhas">
             <div class="corpo__escolhas__botoes">
-                <input type="number" id="num1" class="corpo__escolhas__botoes__input" placeholder="Digite um número...">
+                <input type="number" value= 'null' id="num1" class="corpo__escolhas__botoes__input" placeholder="Digite um número...">
                 <div class="corpo__escolhas__botoes__indiv">
                     <button class="corpo__escolhas__botoes__tipo" id="esquerdaString" onclick="esqString()">Texto</button>
                     <button class="corpo__escolhas__botoes__tipo" id="esquerdaInteiro" onclick="esqInt()">Inteiro</button>
                 </div>
             </div>
+            <img src="../../Assets/Only7DaysOfCode.svg" alt="7DaysOfCode Logo">
             <div class="corpo__escolhas__botoes">
-                <input type="number" id="num2" class="corpo__escolhas__botoes__input" placeholder="Digite um número...">
+                <input type="number" value= 'null' id="num2" class="corpo__escolhas__botoes__input" placeholder="Digite um número...">
                 <div class="corpo__escolhas__botoes__indiv">
                     <button class="corpo__escolhas__botoes__tipo" id="direitaString" onclick="dirString()">Texto</button>
                     <button class="corpo__escolhas__botoes__tipo" id="direitaInteiro" onclick="dirInt()">Inteiro</button>
@@ -32,7 +33,7 @@
             </div>
         </div>
         <div class="corpo__verificar">
-                <p class="corpo__verificar__texto">Verificar comparativos</p>
+                <p class="corpo__verificar__texto">Realizar comparação</p>
                 <button class="corpo__verificar__botao" id="botaoVerificar" onclick="comparar()">Verificar</button>
                 <p class="corpo__verificar__resultado" id="resultado"></p>
             </div>
