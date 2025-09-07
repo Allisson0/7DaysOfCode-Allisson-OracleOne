@@ -12,10 +12,13 @@
             <a class="cabecalho__nav__retorno" href="../../index.html">Voltar à página inicial</a>
         </nav>
     </header>
-    <section class="corpo">
-        <h1>Day One - Comparadores Booleanos</h1>
-        <h2>Comparar valores para verificar suas semelhanças - mesmo tipo e/ou mesmo valor.</h2>
-        <div class="corpo__escolhas">
+
+    <main class="corpo">
+        <section>
+            <h1>Day One - Comparadores Booleanos</h1>
+            <h2>Comparar valores para verificar suas semelhanças - mesmo tipo e/ou mesmo valor.</h2>
+        </section>
+        <section class="corpo__escolhas">
             <div class="corpo__escolhas__botoes">
                 <input type="number" id="num1" class="corpo__escolhas__botoes__input" placeholder="Digite um número...">
                 <div class="corpo__escolhas__botoes__indiv">
@@ -31,13 +34,17 @@
                     <button class="corpo__escolhas__botoes__tipo" id="direitaInteiro" onclick="dirInt()">Inteiro</button>
                 </div>
             </div>
-        </div>
-        <div class="corpo__verificar">
+        </section>
+        <section class="corpo__verificar">
                 <p class="corpo__verificar__texto">Realizar comparação</p>
                 <button class="corpo__verificar__botao" id="botaoVerificar" onclick="comparar()">Verificar</button>
                 <p class="corpo__verificar__resultado" id="resultado"></p>
-            </div>
-    </section>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Desenvolvido por Allisson Silva.</p>
+    </footer>
     <script src="codigoDayOne.js" defer></script>
 </body>
 </html>

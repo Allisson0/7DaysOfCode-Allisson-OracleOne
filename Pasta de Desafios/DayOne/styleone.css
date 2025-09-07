@@ -156,6 +156,7 @@ img:hover{
     font-family: "urbana", sans-serif;
     font-size: 24px;
     font-weight: 300;
+    height: 4vh;
 }
 
 .negativo{
@@ -166,4 +167,14 @@ img:hover{
 .positivo{
     font-weight: 500;
     color: green;
+}
+
+.rodape{
+    margin: 4% 0 0 0;
+    text-align: center;
+    background-color: #739EC9;
+    color: #000000;
+    padding: 16px;
+    font-size: 20px;
+    font-family: "urbana", sans-serif;
 }
