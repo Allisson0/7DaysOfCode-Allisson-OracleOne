@@ -96,11 +96,14 @@ h5{
 }
 
 .rodape{
+    position: absolute;
+    bottom: 0;
     text-align: center;
     background-color: #739EC9;
     color: #000000;
-    margin:3.35% 0 0 0;
-    padding: 16px;
-    font-size: 20px;
+    padding: 25px;
+    width: 100%;
+    font-size: 1.25rem;
     font-family: "urbana", sans-serif;
+    box-sizing: border-box;
 }
