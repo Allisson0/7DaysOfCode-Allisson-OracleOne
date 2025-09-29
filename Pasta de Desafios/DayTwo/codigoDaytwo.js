@@ -62,7 +62,7 @@ function reiniciar(){
     cont = 0;
     idade = 0;
     nome = "Ninguém";
-    programacao = "nenhum";
+    programacao = "Nenhuma";
     mostrarVariavel("Nome",nome);
     mostrarVariavel("Idade",idade);
     mostrarVariavel("Linguagem",programacao);
