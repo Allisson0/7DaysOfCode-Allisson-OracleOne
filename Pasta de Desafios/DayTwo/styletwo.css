@@ -1,20 +1,21 @@
 @import url("https://use.typekit.net/hwt5cjv.css");
 
+:root{
+    --font-basica: "urbana", sans-serif;
+}
+
 *{
-    margin:0;
     padding:0;
 }
 
 .cabecalho{
-    display: flex;
-    justify-content: center;
-    padding: 1% 5%;
+    margin: 2% 0 2% 0;
 }
 
 .cabecalho__nav{
     padding: 15px 0;
     border: 2px solid #F0F8FF;
-    border-radius:10px;
+    border-radius: 10px;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -27,112 +28,168 @@
     padding: 15px 20px;
     text-decoration: none;
     color:#F0F8FF;
-    font-size: 18px;
-    font-family: "urbana", sans-serif;
+    font-size: 1.2rem;
+    font-family: var(--font-basica);
     font-weight: 300;
 }
 
 body{
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+    margin: 0 3%;
     background-color: black;
-    color: white;
-}
-
-
-
-.corpo{
+    color: #F0F8FF;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: content-box;
 }
 
 .boasvindas{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-    margin: 1% 0;
-}
-
-.boasvindas__titulo__importante{
-    color: blue;
-    font-size: 45px;
+    margin: 2% 0;
 }
 
 .boasvindas__titulo{
-    font-family: "urbana", sans-serif;
-    font-size: 30px;
+    font-size: 2rem;
+    font-family: var(--font-basica);
+    font-weight: 800;
+}
+
+.boasvindas__titulo__importante:hover{
+    color: red;
 }
 
 .boasvindas__texto{
-    font-family: "urbana", sans-serif;
-    font-size: 25px;
-    font-weight: 100;
-    padding: 0 20%;
+    font-size: 1.5rem;
+    font-family: var(--font-basica);
+    font-weight: 300;
 }
 
 .escopo{
+    margin: 1% 0;
     display: flex;
     align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 300px;
+    box-sizing: content-box;
+}
 
+.escopo__verVariavel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+    margin: 1% 5% 1% 1%;
+}
+
+.escopo__verVariavel__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.escopo__verVariavel__info__texto{
+    font-size: 1.7rem;
+    font-family: var(--font-basica);
+    font-weight: 800;
+    margin: 0 0;
 }
 
 .escopo__verVariavel__retorno{
     display: flex;
-    flex-direction: row;
-    gap: 50px;
-    width: 300px;
-}
-
-.escopo__verVariavel__retorno__texto{
-    width: 500px;
-    font-family: "urbana", sans-serif;
-    font-size: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
 .escopo__verVariavel__retorno__variavel{
-    width: 300px;
-    text-align: center;
-    font-family: "urbana", sans-serif;
-    font-size: 26px;
+    display: flex;
+    width: 200px;
+    height: 32px;
+    box-sizing: content-box;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-family: var(--font-basica);
     font-weight: 300;
-    padding: 0 0 0 15%;
+    text-align: center;
+    margin: 0 0;
 }
 
 .escopo__cadastro{
     display: flex;
-    box-sizing: border-box;
     flex-direction: column;
     align-items: center;
+    width: 70%;
+    margin: 1% 1% 1% 5%;
     gap: 30px;
-    margin: 0 5% 0 5%;
 }
 
 .escopo__cadastro__texto{
-    text-align: center;
+    font-family: var(--font-basica);
+    font-weight: 300;
+    font-size: 1.5rem;
+    width: 400px;
+    margin: 0;
 }
 
+.escopo__cadastro__input{
+    font-family: var(--font-basica);
+    font-weight: 300;
+    font-size: 1.2rem;
+    field-sizing: content;
+    min-width: 120px;
+    padding: 0 10px;
+    height: 40px;
+    text-align: center;
+    border-radius: 7px;
+}
 
+.escopo__cadastro__input:disabled{
+    background-color: white;
+    text-align: center;
+    width: 120px;
+}
 
+.escopo__cadastro__butoes{
+    display: flex;
+    gap: 40px;
+}
 
+.escopo__cadastro__butoes__botao{
+    width: 110px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: white;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
 
+    font-family: var(--font-basica);
+    font-size: 1.2rem;
+    font-weight: 200;
+}
 
+.escopo__cadastro__butoes__botao:hover{
+    transform: scale(1.1);
+    background-color: aqua;
+}
 
+.escopo__cadastro__butoes__botao:disabled:hover{
+    background-color: white;
+}
 
+.escopo__fundo{
+    margin: 5% 20% 0 20%;
+    font-size: 1.2rem;
+    font-family: var(--font-basica);
+    font-weight: 300;
+}
 
 .rodape{
-    margin: 4% 0 0 0;
+    position: absolute;
+    bottom: 0;
     text-align: center;
     background-color: #739EC9;
     color: #000000;
-    padding: 16px;
-    font-size: 20px;
-    font-family: "urbana", sans-serif;
+    padding: 5px;
+    width: 100%;
+    font-size: 1.25rem;
+    font-family: var(--font-basica);
+    box-sizing: border-box;
 }
