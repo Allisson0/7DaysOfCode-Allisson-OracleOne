@@ -14,41 +14,36 @@
     </header>
     <main class="corpo">
         <section class="boasvindas">
-            <h1 class="boasvindas__titulo">Boas vindas ao desafio dois<br><strong class="boasvindas__titulo__importante">Variaveis</strong></string></h1>
+            <h1 class="boasvindas__titulo">Day two - <strong class="boasvindas__titulo__importante">Variaveis</strong></string></h1>
             <p class="boasvindas__texto">Variaveis são formas de armazenarmos informações no nosso sistema, para que possamos as chamar posteriormente.
                 <br>Aqui você verá uma forma de utilizarmos elas.
             </p>
         </section>
         <section class="escopo">
             <div class="escopo__verVariavel">
+                <div class="escopo__verVariavel__info">
+                    <h1 class="escopo__verVariavel__info__texto">Nome:</h1>
+                    <h1 class="escopo__verVariavel__info__texto">Idade:</h1>
+                    <h1 class="escopo__verVariavel__info__texto">Linguagem:</h1>
+                </div>
                 <div class="escopo__verVariavel__retorno">
-                    <h1 class="escopo__verVariavel__retorno__texto">
-                        Nome:
-                    </h1>
                     <p class="escopo__verVariavel__retorno__variavel" id="Nome">Ninguém</p>
-                </div>
-                <div class="escopo__verVariavel__retorno">
-                    <h1 class="escopo__verVariavel__retorno__texto">
-                        Idade:
-                    </h1>
                     <p class="escopo__verVariavel__retorno__variavel" id="Idade">0</p>
-                </div>
-                <div class="escopo__verVariavel__retorno">
-                    <h1 class="escopo__verVariavel__retorno__texto">
-                        Linguagem:
-                    </h1>
                     <p class="escopo__verVariavel__retorno__variavel" id="Linguagem">Nenhuma</p>
                 </div>
             </div>
             <div class="escopo__cadastro">
                 <h1 class="escopo__cadastro__texto" id="Texto">Qual o seu nome?</h1>
                 <input class="escopo__cadastro__input" id="entrada" placeholder="Digite o seu nome...">
-                <div>
-                <button class="escopo__cadastro__butao" id="butaoEntrada" onclick="acao()">Confirmar</button>
-                <button class="escopo__cadastro__butao" id="butaoReiniciar" onclick="reiniciar()" disabled>Reiniciar</button>
+                <div class="escopo__cadastro__butoes">
+                <button class="escopo__cadastro__butoes__botao" id="butaoEntrada" onclick="acao()">Confirmar</button>
+                <button class="escopo__cadastro__butoes__botao" id="butaoReiniciar" onclick="reiniciar()" disabled>Reiniciar</button>
                 </div>
             </div>
         </section>
+        <h1 class="escopo__fundo">Armazenamos as variaveís em diferentes tipos, por exemplo: inteiros, pontos flutuantes (reais), texto, caractere, booleano (verdadeiro ou falso) 
+            e, dependendo da linguagem, podemos ter outros tipos mais específicos.
+        </h1>
     </main>
     <footer class="rodape">
         <p>Desenvolvido por Allisson Silva.</p>
