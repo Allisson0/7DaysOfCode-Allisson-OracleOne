@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DayThree</title>
+    <link rel="stylesheet" href="stylethree.css">
 </head>
 <body>
-    
+    <header class="cabecalho">
+        <nav class="cabecalho__nav">
+            <a class="cabecalho__nav__retorno" href="../../index.html">Voltar à página inicial</a>
+        </nav>
+    </header>
+    <main class="escopo">
+        <section class="escopo__apresentacao">
+            <h1 class="escopo__apresentacao__titulo">Day Three - <strong class="escopo__apresentacao__titulo__strong">Fluxo de Decisão</strong></h1>
+            <p class="escopo__apresentacao__texto">
+                Agora vamos tratar sobre fluxos de decisão. Saõ compostos de Ifs, Elses e, em alguns casos, 
+                estruturas de repetição no seu escopo. Fluxos de decisão são decisões lógicas que o computador ou software irá tomar com base
+                em determinadas comparações lógicas. Dependendo das respostas que irá encontrar (True ou False) ela realizar ou não uma tarefa.
+                E caso não, temos o else, que também podemos dar condições à ele, com else if.<br>Aqui está um exemplo do uso de fluxos de decisão:
+            </p>
+        </section>
+        <section class="escopo__escolhas">
+            <h2 class="escopo__escolhas__texto" id="textoEscolha">Você quer seguir para a área de <strong class="escopo__escolhas__texto__strong">Front-End</strong>
+            ou de <strong class="escopo__escolhas__texto__strong">Back-End</strong>?
+            </h2> 
+            <input class="escopo__escolhas__entrada" id="inputFormacoes" placeholder="Digite a tecnologia...">
+            <div class="escopo__escolhas__botoes">
+                <button class="escopo__escolhas__botoes__botao" id="botaoEsquerdo" onclick="BotaoEsquerdo()">Front-End</button>
+                <button class="escopo__escolhas__botoes__botao" id="botaoDireito" onclick="BotaoDireito()">Back-End</button>
+            </div>
+            <ul class="escopo__escolhas__lista" id="listaFormacoes">
+                <!-- class="escolha__escolhas__lista__conteudo" -->
+            </ul>
+            <button class="escopo__escolhas__reiniciar" id="botaoReiniciar" onclick="reiniciar()">Reiniciar</button>
+        </section>
+    </main>
+    <footer class="rodape">
+        <p class="rodade__texto">Desenvolvido por Allisson Silva.</p>
+    </footer>
+    <script src="codigoDayThree.js" defer></script>
 </body>
 </html>
