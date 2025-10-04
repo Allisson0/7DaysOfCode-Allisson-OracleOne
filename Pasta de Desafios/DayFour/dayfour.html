@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DayFour</title>
+    <link rel="stylesheet" href="stylefour.css">
 </head>
 <body>
-    
+    <header class="cabecalho">
+        <nav class="cabecalho__nav">
+            <a class="cabecalho__nav__retorno" href="../../index.html">Voltar à página inicial</a>
+        </nav>
+    </header>
+    <main class="escopo">
+        <section class="escopo__apresentacao">
+            <h1 class="escopo__apresentacao__titulo">
+                DayFour - <strong>Mais loops e randomização</strong>
+            </h1>
+            <p class="escopo__apresentacao__texto">
+                Neste quarto dia, trabalharemos mais a questão de loops e aprenderemos sobre randomização.<br>
+                Loops na programação, são constituidos por condições que realizarão tarefas até serem satisfeitas.<br>
+                Já a randomização se dá pela criação de números aleatórios (que podem estar dentro de intervalos) para uso no código.<br>
+                Abaixo estarão as mais comuns estruturas de condição e uma parte voltada para a randomização.
+            </p>
+            <div class="escopo__apresentacao__tipos">
+                <button class="escopo__apresentacao__tipos__botao" id="botaoFor" onclick="pressFor()">For</button>
+                <button class="escopo__apresentacao__tipos__botao" id="botaoWhile" onclick="pressWhile()">While</button>
+                <button class="escopo__apresentacao__tipos__botao" id="botaoDoWhile" onclick="pressDoWhile()">DoWhile</button>
+                <button class="escopo__apresentacao__tipos__botao" id="botaoRandom" onclick="pressRandom()">Random</button>
+            </div>
+            <p class="escopo__apresentacao__selecao" id="botaoEscolhido">
+                <!-- O for é composto pela seguinte estrutura: <br>
+                for(variável de controle; condição para loop; incremento da variável de controle)<br>
+                Assim, enquanto a condição for verdadeira, o programa realizará toda a estrutura de código dentro dele.
+                Algumas linguagens de programação tem sintaxes diferentes para o  -->
+            </p>
+            <h6 class="escopo__apresentacao__exemplo">Exemplo de uso com o jogo do <strong>Número Secreto</strong></h6>
+        </section>
+        <section class="escopo__tarefa">
+            <h2 class="escopo__tarefa__texto" id="textoTarefa">Você tem 3 tentativas. <br>Escolha um número de 1 a 10:</h2>
+            <input type="number" class="escopo__tarefa__input" id="entradaNumero" placeholder="Digite o número">
+            <div class="escopo__tarefa__botoes">
+                <button class="escopo__tarefa__botoes__botao" id="botaoEnviar" onclick="verficarNumero()">Chutar</button>
+                <button class="escopo__tarefa__botoes__botao" id="botaoReiniciar" onclick="reiniciar()" disabled>Reiniciar</button>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <p class="rodape__texto">Desenvolvido por Allisson Silva.</p>
+    </footer>
+
+    <script src="codigoDayFour.js" defer></script>
+    <script src="codigoAuxApresentacao.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,246 @@
+@import url("https://use.typekit.net/hwt5cjv.css");
+
+:root{
+    --cor-principal: #F0F8FF;
+    --cor-secundaria: blue;
+    --cor-terciaria: black;
+    --cor-quartenaria: aqua;
+    --cor-rodape: #739EC9;
+    --fonte-primaria: "urbana", sans-serif;
+    --fonte-secundaria: "century-gothic", sans-serif;
+}
+
+*{
+    margin:0;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: center;
+    margin: 2% 0;
+}
+
+.cabecalho__nav{
+    padding: 15px 0;
+    border: 2px solid var(--cor-principal);
+    border-radius: 15px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.cabecalho__nav:hover{
+    background-color: var(--cor-secundaria);
+    transform: scale(1.1);
+}
+
+.cabecalho__nav__retorno{
+    padding: 15px 20px;
+    text-decoration: none;
+    color: var(--cor-principal);
+    font-family: var(--fonte-primaria);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+body{
+    background-color: var(--cor-terciaria);
+    color: var(--cor-principal);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: content-box;
+}
+
+.escopo{
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.escopo__apresentacao{
+    margin: 0.5% 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.escopo__apresentacao__titulo{
+    font-family: var(--fonte-primaria);
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.escopo__apresentacao__titulo strong{
+    font-size: 2.2rem;
+}
+
+.escopo__apresentacao__titulo strong:hover{
+    color: var(--cor-rodape);
+}
+
+.escopo__apresentacao__texto{
+    font-family: var(--fonte-primaria);
+    font-size: 1.3rem;
+    line-height: 1.25;
+    font-weight: 100;
+    max-height: 100px;
+    padding:5px 0;
+    margin: 0 30px;
+}
+
+.escopo__apresentacao__texto strong{
+    color: var(--cor-secundaria);
+}
+
+.escopo__apresentacao__tipos{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 1% 0;
+}
+
+.escopo__apresentacao__tipos__botao{
+    padding: 5px 0;
+    background-color: var(--cor-principal);
+    color: var(--cor-terciaria);
+
+    width: 90px;
+    border-radius: 10px;
+    border: 0;
+
+    font-family: var(--fonte-primaria);
+    font-size: 1.3rem;
+    font-weight: 300;
+
+    transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+}
+
+.escopo__apresentacao__tipos__botao:hover{
+    transform: scale(1.1);
+}
+
+.escopo__apresentacao__tipos__botao.selecionado{
+    transform: scale(1.2);
+    border-radius: 15px;
+    background-color: var(--cor-quartenaria);
+}
+
+.escopo__apresentacao__tipos__botao.selecionado:hover{
+    transform: scale(1.3);
+}
+
+.escopo__apresentacao__selecao{
+    flex-wrap: wrap;
+    max-height: 200px;
+    width: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+
+    padding: 0 10px;
+    margin: 0 150px;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-principal) var(--cor-terciaria);
+}
+
+.escopo__apresentacao__selecao strong{
+    font-weight: 900;
+    color: var(--cor-rodape);
+}
+
+.escopo__apresentacao__exemplo{
+    margin: 1%;
+    font-family: var(--fonte-primaria);
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+.escopo__apresentacao__exemplo strong{
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.escopo__tarefa{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 10px 0;
+    gap: 20px;
+    align-items: center;
+}
+
+.escopo__tarefa__texto{
+    font-family: var(--fonte-primaria);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.escopo__tarefa__input{
+    align-items: center;
+    height: 50px;
+    width: 120px;
+    font-family: var(--fonte-primaria);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.escopo__tarefa__input.acertou:disabled{
+    background-color: chartreuse;
+    font-size: 2rem;
+    color: var(--cor-terciaria);
+}
+
+.escopo__tarefa__input.errou:disabled{
+    background-color: crimson;
+    font-size: 2rem;
+    color: var(--cor-terciaria);
+}
+
+.escopo__tarefa__botoes{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.escopo__tarefa__botoes__botao{
+    border-radius: 15px;
+    padding: 14px 0;
+    width: 100px;
+    font-family: var(--fonte-primaria);
+    font-size: 1.25rem;
+    font-weight: 300;
+    transition: transform 0.5s ease-in-out;
+}
+
+.escopo__tarefa__botoes__botao:hover{
+    transform: scale(1.1);
+}
+
+.escopo__tarefa__botoes__botao.erro{
+    background-color: crimson;
+}
+
+.escopo__tarefa__botoes__botao.acerto{
+    background-color: green;
+}
+
+.rodape{
+    text-align: center;
+    background-color: var(--cor-rodape);
+    color: var(--cor-terciaria);
+    margin: 3.65% 100% 0 100%;
+    padding: 25px;
+    width: 100%;
+    font-size: 1.25rem;
+    font-family: var(--fonte-primaria);
+    box-sizing: border-box;
+}
