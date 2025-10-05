@@ -61,6 +61,9 @@ function adicionarNaLista(lista, listaHTML, adicionado){
         adicionaItem.textContent=lista[i];
         listaHTML.appendChild(adicionaItem);
     }
+
+    //Reinicia a lista suspensa
+    listaSuspensa.value='';
 }
 
 //Reinicia todo o site.
@@ -69,4 +72,6 @@ function reiniciar(){
         base[i][1] = [];
         base[i][2].innerHTML = "";
     }
+    listaSuspensa.value ='';
+    entrada.value='';
 }
