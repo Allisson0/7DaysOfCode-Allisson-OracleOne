@@ -31,6 +31,7 @@ function inserirItem(){
 
     //Verifica se é válido a inserção, se não, retorna
     if(item==='' || typeof(item) == typeof(0) || tipo===''){
+        trocarCor(botaoEnviar, 'red');
         return;
     }
 
@@ -43,6 +44,7 @@ function inserirItem(){
             break;
         }
     }
+    trocarCor(botaoEnviar, 'green');
     //Reseta o valor de entrada.
     entrada.value = '';
 }
@@ -68,10 +70,19 @@ function adicionarNaLista(lista, listaHTML, adicionado){
 
 //Reinicia todo o site.
 function reiniciar(){
+    trocarCor(botaoReiniciar, 'green');
     for(let i = 0; i<base.length; i++){
         base[i][1] = [];
         base[i][2].innerHTML = "";
     }
     listaSuspensa.value ='';
     entrada.value='';
+}
+
+//Trocar cor
+function trocarCor(botao, cor){
+    botao.classList.add(cor);
+    setTimeout(function(){
+        botao.classList.remove(cor);
+    },100);
 }

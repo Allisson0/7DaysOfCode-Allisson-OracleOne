@@ -7,77 +7,82 @@
     <link rel="stylesheet" href="stylefive.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <nav class="cabecalho__nav">
-            <a class="cabecalho__nav__retorno" href="../../index.html">Voltar à página inicial</a>
-        </nav>
-    </header>
-    <main class="escopo">
-        <section class="escopo__apresentacao">
-            <h1 class="escopo__apresentacao__titulo">Day Five - <strong>Arrays e Coleções</strong></h1>
-            <p class="escopo__apresentacao__texto">
-                <strong>Arrays e coleções</strong>, são formas de armazenarmos itens em listas. <strong>Um array</strong> é como se fosse uma lista de tarefas ou compras,
-                uma coleção de dados referênciados por uma única variável. Normalmente é criada iniciando a variável e atribuindo ela à uma
-                lista vazia - [ ] -, mas, é necessário verificar a documentação da linguagem para entender como criar um array (lista) na linguagem
-                escolhida. <br>
-                Ela então pode ser mexida com comandos para adicionar ou remover um item, na frente, no final ou em qualquer lugar. Também há maneiras de
-                retornar o tamanho da lista para podermos utilizar em <strong>estruturas de repetição</strong> que servirão para realizar verificações em toda a
-                lista.
-            </p>
-            <p class="escopo__apresentacao__exemplo">Abaixo está um exemplo de uso com <strong>listas de compras</strong>.</p>
-        </section>
-        <section class="escopo__tarefa">
-            <img class="escopo__tarefa__fotoCarrinho" src="" alt="Foto de carrinho de compras">
-            <h2 class="escopo__tarefa__introducao">Digite um item e o seu tipo para adicionar ao carrinho: </h2>
-            <div class="escopo__tarefa__entrada">
-                <input class="escopo__tarefa__entrada__input" id="entrada" placeholder="Informe um item">
-                <select class="escopo__tarefa__entrada__selecao" id="selecTipo">
-                    <option value="" disabled selected>--Selecione o tipo--</option>
-                    <option value="frutas">Frutas</option>
-                    <option value="laticineos">Laticíneos</option>
-                    <option value="congelados">Congelados</option>
-                    <option value="doces">Doces</option>
-                    <option value="outros">Outros</option>
-                </select>
-            </div>
-            <div class="escopo__tarefa__botoes">
-                <button class="escopo__tarefa__botoes__botao" id="botaoEnviar" onclick="inserirItem()">Enviar</button>
-                <button class="escopo__tarefa__botoes__botao" id="botaoReiniciar" onclick="reiniciar()">Reiniciar</button>
-            </div>
-            <div class="escopo__tarefa__compras">
-                <div class="escopo__tarefa__compras__conjunto">
-                    <p class="escopo__tarefa__compras__conjunto__texto">Frutas</p>
-                    <ul class="escopo__tarefa__compras__conjunto__compras" id="listaFrutas">
-                        <!--  -->
-                    </ul>
+    <div id="wrapper">
+        <header class="cabecalho">
+            <nav class="cabecalho__nav">
+                <a class="cabecalho__nav__retorno" href="../../index.html">Voltar à página inicial</a>
+            </nav>
+        </header>
+        <main class="escopo">
+            <section class="escopo__apresentacao">
+                <h1 class="escopo__apresentacao__titulo">Day Five - <strong>Arrays e Coleções</strong></h1>
+                <p class="escopo__apresentacao__texto">
+                    <strong>Arrays e coleções</strong>, são formas de armazenarmos itens em listas. <strong>Um array</strong> é como se fosse uma lista de tarefas ou compras,
+                    uma coleção de dados referênciados por uma única variável. Normalmente é criada iniciando a variável e atribuindo ela à uma
+                    lista vazia - [ ] -, mas, é necessário verificar a documentação da linguagem para entender como criar um array (lista) na linguagem
+                    escolhida. <br>
+                    Ela então pode ser mexida com comandos para adicionar ou remover um item, na frente, no final ou em qualquer lugar. Também há maneiras de
+                    retornar o tamanho da lista para podermos utilizar em <strong>estruturas de repetição</strong> que servirão para realizar verificações em toda a
+                    lista.
+                </p>
+                <p class="escopo__apresentacao__exemplo">Abaixo está um exemplo de uso com <strong>listas de compras</strong>.</p>
+            </section>
+            <section class="escopo__tarefa">
+                <img class="escopo__tarefa__fotoCarrinho" src="../../Assets/shoppingcar.png" alt="Foto de carrinho de compras">
+                <h2 class="escopo__tarefa__introducao">Digite um item e o seu tipo para adicionar ao carrinho: </h2>
+                <div class="escopo__tarefa__entrada">
+                    <div class="escopo__tarefa__entrada__input">
+                        <input class="escopo__tarefa__entrada__input__insercao" id="entrada" type="text" required>
+                        <label class="escopo__tarefa__entrada__input__label" for="entrada">Informe um item</label>
+                    </div>
+                    <select class="escopo__tarefa__entrada__selecao" id="selecTipo">
+                        <option value="">--Selecione o tipo--</option>
+                        <option value="frutas">Frutas</option>
+                        <option value="laticineos">Laticíneos</option>
+                        <option value="congelados">Congelados</option>
+                        <option value="doces">Doces</option>
+                        <option value="outros">Outros</option>
+                    </select>
                 </div>
-                <div class="escopo__tarefa__compras__conjunto">
-                    <p class="escopo__tarefa__compras__conjunto__texto">Laticineos</p>
-                    <ul class="escopo__tarefa__compras__conjunto__compras" id="listaLaticineos">
-                        <!--  -->
-                    </ul>
+                <div class="escopo__tarefa__botoes">
+                    <button class="escopo__tarefa__botoes__botao" id="botaoEnviar" onclick="inserirItem()">Enviar</button>
+                    <button class="escopo__tarefa__botoes__botao" id="botaoReiniciar" onclick="reiniciar()">Reiniciar</button>
                 </div>
-                <div class="escopo__tarefa__compras__conjunto">
-                    <p class="escopo__tarefa__compras__conjunto__texto">Congelados</p>
-                    <ul class="escopo__tarefa__compras__conjunto__compras" id="listaCongelados">
-                        <!--  -->
-                    </ul>
+                <div class="escopo__tarefa__compras">
+                    <div class="escopo__tarefa__compras__conjunto">
+                        <p class="escopo__tarefa__compras__conjunto__texto">Frutas</p>
+                        <ul class="escopo__tarefa__compras__conjunto__compras" id="listaFrutas">
+                            <!--  -->
+                        </ul>
+                    </div>
+                    <div class="escopo__tarefa__compras__conjunto">
+                        <p class="escopo__tarefa__compras__conjunto__texto">Laticineos</p>
+                        <ul class="escopo__tarefa__compras__conjunto__compras" id="listaLaticineos">
+                            <!--  -->
+                        </ul>
+                    </div>
+                    <div class="escopo__tarefa__compras__conjunto">
+                        <p class="escopo__tarefa__compras__conjunto__texto">Congelados</p>
+                        <ul class="escopo__tarefa__compras__conjunto__compras" id="listaCongelados">
+                            <!--  -->
+                        </ul>
+                    </div>
+                    <div class="escopo__tarefa__compras__conjunto">
+                        <p class="escopo__tarefa__compras__conjunto__texto">Doces</p>
+                        <ul class="escopo__tarefa__compras__conjunto__compras" id="listaDoces">
+                            <!--  -->
+                        </ul>
+                    </div>
+                    <div class="escopo__tarefa__compras__conjunto">
+                        <p class="escopo__tarefa__compras__conjunto__texto">Outros</p>
+                        <ul class="escopo__tarefa__compras__conjunto__compras" id="listaOutros">
+                            <!--  -->
+                        </ul>
+                    </div>
                 </div>
-                <div class="escopo__tarefa__compras__conjunto">
-                    <p class="escopo__tarefa__compras__conjunto__texto">Doces</p>
-                    <ul class="escopo__tarefa__compras__conjunto__compras" id="listaDoces">
-                        <!--  -->
-                    </ul>
-                </div>
-                <div class="escopo__tarefa__compras__conjunto">
-                    <p class="escopo__tarefa__compras__conjunto__texto">Outros</p>
-                    <ul class="escopo__tarefa__compras__conjunto__compras" id="listaOutros">
-                        <!--  -->
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
+    </div>
     <footer class="rodape">
         <p class="rodade__texto">Desenvolvido por Allisson Silva.</p>
     </footer>
