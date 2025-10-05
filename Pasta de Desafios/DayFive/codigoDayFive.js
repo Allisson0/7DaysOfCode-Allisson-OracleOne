@@ -22,7 +22,13 @@ let arrayDoces = [];
 let arrayOutros = [];
 
 //Base de relacionamento do retorno da seleção, o array da lista e a lista em HTML
-let base = [["frutas", arrayFrutas, listaFrutas],["laticineos", arrayLaticineos, listaLaticineos],["congelados", arrayCongelados, listaCongelados],["doces", arrayDoces, listaDoces],["outros", arrayOutros, listaOutros]];
+let base = [
+    ["frutas", arrayFrutas, listaFrutas],
+    ["laticineos", arrayLaticineos, listaLaticineos],
+    ["congelados", arrayCongelados, listaCongelados],
+    ["doces", arrayDoces, listaDoces],
+    ["outros", arrayOutros, listaOutros]
+];
 
 //Função de inserção de itens nas listas
 function inserirItem(){
