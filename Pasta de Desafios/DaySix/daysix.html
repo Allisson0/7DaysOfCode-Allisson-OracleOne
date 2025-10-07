@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day Six</title>
+        <link ref="stylesheet" href="stylesix.css">
+    </head>
+    <body>
+        <div id="divisor">
+            <header class="cabecalho">
+                <nav class="cabecalho__nav">
+                    <a href="../../index.html" class="cabecalho__nav__retorno">Voltar à página inicial</a>
+                </nav>
+            </header>
+            <main clas="escopo">
+                <section class="escopo__apresentacao">
+                    <h1 class="escopo__apresentacao__titulo">Day Six - <strong>Remoção de Arrays</strong></h1>
+                    <p class="escopo__apresentacao__texto">
+                        <strong>A remoção de arrays</strong> é semelhante à inserção. Entretanto, usamos novas formas de os remover.<br>
+                        Podemos remover um item pelo primeiro índice da lista, pelo último ou do meio dela, através do <strong>index</strong> do array. O index
+                        é como referenciamos aquele item na lista. Sempre começamos pelo valor <strong>0</strong> até o valor do tamanho da lista menos um.
+                        Por exemplo:<br>
+                        array = ['Banana', 'maca', 'estrogonofe']<br>
+                        Onde a posição de banana é 0, maca é 1, e estrogonofe é 2. Sendo que o tamanho deste array é 3.<br>
+                        Assim, podemos remover o seu primeiro item com <strong>.pop(0)</strong>, ou o seu último com <strong>.pop(-1)</strong>. E qualquer outro com <strong>.pop(x)</strong>.<br>
+                        Os itens serão realocados a devida nova posição, conforme a remoção feita. <br>
+                        Entretanto, é sempre necessário verificar como se dá a remoção de arrays na linguagem escolhida.
+                    </p>
+                    <p class="escopo__apresentacao__exemplo">
+                        Para exemplificação: lista de carrinho de compras 2.0: 
+                    </p>
+                </section>
+                <section class="escopo__loja">
+                    <img class="escopo__loja__carrinho" src="../../Assets/shoppingcar.png" alt="Carrinho de Compras">
+                    <div class="escopo__loja__seccoes">
+                        <button class="escopo__loja__seccoes__botao" id="frutas" onclick="escolheFrutas()">Frutas</button>
+                        <button class="escopo__loja__seccoes__botao" id="laticineos" onclick="escolheLaticineos()">Laticíneos</button>
+                        <button class="escopo__loja__seccoes__botao" id="congelados" onclick="escolheCongelados()">Congelados</button>
+                        <button class="escopo__loja__seccoes__botao" id="doces" onclick="escolheDoces()">Doces</button>
+                        <button class="escopo__loja__seccoes__botao" id="outros" onclick="escolheOutros()">Outros</button>
+                    </div>
+                    <img class="escopo__loja__logo" src="" alt="lista X" id="logoLista">
+                    <ul class="escopo__loja__lista" id="listaLoja">
+                        <!-- <li class="escopo__loja__lista__item">
+                            <label class="escopo__loja__lista__item__prod" id="prod[0]">nome[0]</label>
+                            <label class="escopo__loja__lista__item__preco" id="preco[0]">preco[0]</label>
+                            <input class="escopo__loja__lista__item__input" type="number" min="1" placeholder="Qtd" id="item[0]">
+                            <button class="escopo__loja__lista__item__add" id="botaoAdd[0]" onclick="add()">+</button>
+                        </li> -->
+                    </ul>
+                </section>
+                <section class="escopo__carrinho">
+                    <label class="escopo__carrinho__texto">Itens no carrinho:</label>
+                    <ul class="escopo__carrinho__lista" id="listaCarrinho">
+                        <!-- <li class="escopo__carrinho__lista__item" id="listaCarrinho">
+                            <label class="escopo__carrinho__lista__item__prod" id="prodC[0]">nomeCarrinho[0]</label>
+                            <label class="escopo__carrinho__lista__item__preco" id="precoC[0]">precoC[0]</label>
+                            <button class="escopo__carrinho__lista__item__botao" id="rem[0]">-</button>
+                            <label class="escopo__carrinho__lista__item__qtd" id="itemC[0]">qtdC[0]</label>
+                            <button class="escopo__carrinho__lista__item__botao" id="add[0]">+</button>
+                            <button class="escopo__carrinho__lista__item__botaoExcluir" id="excluir[0]">X</button>
+                        </li> -->
+                    </ul>
+                    <div class="escopo__carrinho__total">
+                        <div class="escopo__carrinho__total__itens">
+                            <label class="escopo__carrinho__total__itens__texto">Quantidade de Itens:</label>
+                            <label class="escopo__carrinho__total__itens__qtd" id="qtdItensGeral">0</label>
+                        </div>
+                        <div class="escopo__carrinho__total__preco"> 
+                            <label class="escopo__carrinho__total__preco__texto">Preço total:</label>
+                            <label class="escopo__carrinho__total__preco__preco" id="precoTot">R$0.00</label>
+                        </div>
+                    </div>
+                    <button class="escopo__carrinho__resetar" id="botaoReset" onclick="reiniciar()">Resetar</button>
+                </section>
+            </main>
+        </div>
+        <footer class="rodape">
+            <label class="rodape__texto">Desenvolvido por Allisson Silva.</label>
+        </footer>
+
+        <!-- <script src="listaCompras.js" defer></script> -->
+        <script src="codigoDaySix.js" defer></script>
+    </body>
+</html>
