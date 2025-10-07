@@ -25,7 +25,7 @@ let qtdItensGeral = 0;
 let precoTot = 0.0;
 
 //Arrays de definicao de itens e preco individual
-listaFrutas=[
+let listaFrutas=[
     ['Banana', 5.8],
     ['Maca', 3.5],
     ['Laranja', 2.5],
@@ -33,7 +33,7 @@ listaFrutas=[
     ['Açaí', 15]
 ];
 
-listaLaticineos=[
+let listaLaticineos=[
     ['Iorgute', 4.5],
     ['Queijo', 9.9],
     ['Toddynho', 6.7],
@@ -41,7 +41,7 @@ listaLaticineos=[
     ['Danone', 5.4]
 ];
 
-listaCongelados=[
+let listaCongelados=[
     ['Carne Bovina', 15.5],
     ['Carne Suína', 13.5],
     ['Frango', 9.9],
@@ -49,7 +49,7 @@ listaCongelados=[
     ['Pizza', 12.5]
 ];
 
-listaDoces=[
+let listaDoces=[
     ['Candy', 2.5],
     ['Mm', 2.6],
     ['Caixa de Bombom', 12],
@@ -57,7 +57,7 @@ listaDoces=[
     ['LollyPop', 2.5]
 ];
 
-listaOutros=[
+let listaOutros=[
     ['Arduino Uno', 56.7],
     ['Computador Gamer', 3500],
     ['Pratos 10x', 100],
@@ -155,7 +155,7 @@ function preencherLoja(listaEsc){
 
         let input = document.createElement('input');
         input.type = 'number';
-        input.min = '1';
+        input.min = '0';
         input.placeholder = 'Qtd';
         input.id = 'entrada_'+i;
         input.classList.add("escopo__loja__lista__item__input");
@@ -185,7 +185,7 @@ function preencherLoja(listaEsc){
 //Funcao de adicao no carrinho de compras
 function adicionarNoCarrinho(){
     //pega o valor do botao pressionado (definido anteriormente como o indice da lista)
-    let id = this.value;
+    let id = Number(this.value);
     //pega o valor do input da entrada da lista escolhida e retorna seu valor
     let input = 'entrada_'+id;
     let inputHTML = document.getElementById(input);
@@ -198,7 +198,7 @@ function adicionarNoCarrinho(){
     }
 
     //transforma em inteiro a quantidade
-    qtd = parseInt(qtd, 10);
+    qtd = Number(qtd);
 
     //verifica se o item adicionado já não está na lista do carrinho
     let casa = listaCarrinho.findIndex(itemExistente => itemExistente[0] === listaAtiva[id][0]);
@@ -285,33 +285,34 @@ function atualizarCarrinhoHTML(){
 //Incrementa a quantidade do item do carrinho, desde que a quantidade nao seja
 //menor que 0, se for menor que 0, ele ira remover da lista
 function diminuirValor(){
-    let id = this.value;
+    let id = Number(this.value);
     let qtdAtual = listaCarrinho[id][2];
     if(qtdAtual>0){
         listaCarrinho[id][2]-=1;
         atualizarCarrinhoHTML();
     }
     else{
-        excluirDoCarrinho(id);
+        excluirDoCarrinhoMin(id);
     }
 }
 
 //incrementa a quantidade do item no carrinho 
 function adicionarValor(){
-    let id = this.value;
+    let id = Number(this.value);
     listaCarrinho[id][2]+=1;
     atualizarCarrinhoHTML();
 }
 
 //exclui o item do carrinho
 function excluirDoCarrinho(){
-    let id = this.value;
+    let id = Number(this.value);
+    
     listaCarrinho.splice(id,1);
     atualizarCarrinhoHTML();
 }
 
 //exclui o item do carrinho se for diminuido direto da funcao 'diminuirValor()'
-function excluirDoCarrinho(id){
+function excluirDoCarrinhoMin(id){
     listaCarrinho.splice(id,1);
     atualizarCarrinhoHTML();
 }
@@ -329,8 +330,11 @@ function atualizarTotal(){
     qtdGeralHTML.innerHTML = qtdItensGeral;
 }
 
-//Reinicia a pagina (a lista do carrinho)
+//Reinicia a pagina
 function reiniciar(){
     listaCarrinho = [];
     atualizarCarrinhoHTML();
+    listaHTML.innerHTML='';
+    listaAtiva=[];
+    esc = 0;
 }
