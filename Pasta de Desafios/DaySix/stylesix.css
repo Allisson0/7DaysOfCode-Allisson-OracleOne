@@ -1,0 +1,378 @@
+@import url("https://use.typekit.net/hwt5cjv.css");
+
+:root{
+    --cor-principal: #F0F8FF;
+    --cor-secundaria: blue;
+    --cor-terciaria: black;
+    --cor-quartenaria: aqua;
+    --cor-rodape: #739EC9;
+    --fonte-primaria: "urbana", sans-serif;
+    --fonte-secundaria: "century-gothic", sans-serif;
+}
+
+*{
+    margin:0;
+}
+
+body{
+    background-color: var(--cor-terciaria);
+    color:var(--cor-principal);
+}
+
+/* Divisor para rodape acompanhar head e main */
+#divisor{
+    flex-grow: 1;
+}
+
+.cabecalho{
+    margin: 2% 0;
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalho__nav{
+    padding: 15px 0;
+    border: solid 2px var(--cor-principal);
+    border-radius: 15px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.cabecalho__nav:hover{
+    background-color: var(--cor-secundaria);
+    transform: scale(1.1);
+}
+
+.cabecalho__nav__retorno{
+    text-decoration: none;
+    padding: 15px 15px;
+    font-family: var(--fonte-primaria);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--cor-principal);
+    cursor: pointer;
+}
+
+
+
+.escopo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 5%;
+    gap: 20px;
+}
+
+.escopo__apresentacao{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10%;
+    gap: 20px;
+}
+
+.escopo__apresentacao__titulo{
+    font-family: var(--fonte-primaria);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.escopo__apresentacao__titulo strong{
+    font-weight: 800;
+    font-size: 2.2rem;
+}
+
+.escopo__apresentacao__titulo strong:hover{
+    color:chartreuse;
+}
+
+.escopo__apresentacao__texto{
+    font-family: var(--fonte-primaria);
+    font-size: 1.2rem;
+    font-weight: 200;
+    line-height: 1.3;
+}
+
+.escopo__apresentacao__texto strong{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--cor-rodape);
+}
+
+.escopo__apresentacao__exemplo{
+    font-size: 1.6rem;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+}
+
+.escopo__apresentacao__exemplo strong{
+    font-size: 2rem;
+}
+
+
+
+
+.escopo__loja{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 700px;
+    align-items: center;
+}
+
+.escopo__loja__carrinho{
+    position: block;
+    width: 80px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.escopo__loja__carrinho:hover{
+    transform: scale(1.2);
+}
+
+.escopo__loja__seccoes{
+    margin-top: 10px;
+    display: flex;
+    gap: 33px;
+    margin-bottom: 10px;
+}
+
+.escopo__loja__seccoes__botao{
+    font-family: var(--fonte-primaria);
+    font-size: 1.2rem;
+    font-weight: 400;
+
+    width: 100px;
+    height: 30px;
+
+    border: solid 2px var(--cor-principal);
+    border-radius: 10px;
+    background-color: var(--cor-principal);
+
+    cursor: pointer;
+
+    transition: transform 0.5s ease-in-out;
+}
+
+.escopo__loja__seccoes__botao:hover{
+    transform: scale(1.1);
+}
+
+.escopo__loja__seccoes__botao.ativo{
+    background-color: var(--cor-quartenaria);
+    transform: scale(1.2);
+}
+
+.escopo__loja__seccoes__botao.ativo:hover{
+    transform: scale(1.25);
+}
+
+.escopo__loja__logo{}
+
+.escopo__loja__lista{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding-left: 0;
+    gap: 15px;
+    width: 450px;
+    max-height: 1000px;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.escopo__loja__lista.fechado{
+    max-height: 0;
+    opacity: 0;
+}
+
+.escopo__loja__lista__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: var(--cor-principal);
+    color: var(--cor-terciaria);
+    /* border: solid 1px var(--cor-principal); */
+    border-radius: 15px;
+    height: 45px;
+    padding: 0 20px;
+}
+
+.escopo__loja__lista__item__prod{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.1rem;
+    width: 100px;
+}
+
+.escopo__loja__lista__item__preco{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.2rem;
+    width: 80px;
+    text-decoration: underline var(--cor-secundaria);
+}
+
+.escopo__loja__lista__item__input{
+    text-align: center;
+    font-family: var(--fonte-primaria);
+    font-size: 1.2rem;
+    font-weight: 200;
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.escopo__loja__lista__item__add{
+    background-color: var(--cor-principal);
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+    cursor:pointer;
+
+    border-radius: 5px;
+}
+
+.escopo__loja__lista__item__add:hover{
+    transform: scale(1.1);
+    background-color: antiquewhite;
+}
+
+.escopo__loja__lista__item__add.true{
+    transform: scale(1.2);
+    background-color: green;
+    transition: background-color 0s ease-in-out, transform 0s ease-in-out;
+}
+
+.escopo__loja__lista__item__add.false{
+    transform: scale(1.2);
+    background-color: red;
+    transition: background-color 0s ease-in-out, transform 0s ease-in-out;
+}
+
+
+
+
+.escopo__carrinho{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    gap: 15px;
+}
+
+.escopo__carrinho__texto{
+    border-top: solid 1px var(--cor-quartenaria);
+    border-bottom: solid 1px var(--cor-quartenaria);
+    padding: 10px 0;
+    font-family: var(--fonte-primaria);
+    font-size: 2rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+.escopo__carrinho__lista{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding-left: 0;
+    gap: 15px;
+    width: 450px;
+    max-height: 1000px;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.escopo__carrinho__lista__nothing{
+    font-family:var(--fonte-secundaria);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.escopo__carrinho__lista__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: var(--cor-principal);
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    border-radius: 10px;
+    height: 45px;
+    padding: 5px 10px;
+
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out; 
+}
+
+.escopo__carrinho__lista__item.novo{
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.escopo__carrinho__lista__item__prod{
+    font-size: 1.2rem;
+    width: 100px;
+}
+
+.escopo__carrinho__lista__item__preco{
+    font-size: 1.2rem;
+    width: 80px;
+    text-decoration: underline var(--cor-secundaria);
+}
+
+.escopo__carrinho__lista__item__casaQtd{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: 100px;
+}
+
+.escopo__carrinho__lista__item__casaQtd__botao{
+    width: 25px;
+    border-radius: 5px;
+    cursor:pointer;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    transition: transform 0.5s ease-in-out;
+}
+
+.escopo__carrinho__lista__item__casaQtd__botao:hover{
+    transform: scale(1.1);
+}
+
+.escopo__carrinho__lista__item__casaQtd__botao.true{
+    transform: scale(1);
+    background-color: green;
+    transition: background-color 0s ease-in-out, transform 0s ease-in-out;
+}   
+
+.escopo__carrinho__lista__item__casaQtd__qtd{
+    width: 100px;
+    text-align: center;
+}
+
+.escopo__carrinho__lista__item__botaoExcluir{
+    width: 35px;
+    border-radius: 7px;
+    cursor:pointer;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    background-color: red;
+
+    transition: transform 0.5s ease-in-out;
+}
+
+.escopo__carrinho__lista__item__botaoExcluir:hover{
+    transform: scale(1.1);
+}
