@@ -41,7 +41,6 @@
 }
 
 body{
-    margin: 0 5%;
     background-color: var(--cor-terciaria);
     color: var(--cor-principal);
     display: flex;
@@ -52,7 +51,7 @@ body{
 }
 
 .escopo{
-    margin: 0 10%;
+    margin: 0 12%;
 }
 
 .escopo__apresentacao{
@@ -80,6 +79,7 @@ body{
     font-family: var(--fonte-primaria);
     font-size: 1.25rem;
     font-weight: 100;
+    line-height: 1.2;
     margin: 0 5%;
 }
 
@@ -203,8 +203,7 @@ body{
 }
 
 .rodape{
-    position: absolute;
-    bottom: 0;
+    margin-top: 10%;
     text-align: center;
     background-color: var(--cor-rodape);
     color: var(--cor-terciaria);

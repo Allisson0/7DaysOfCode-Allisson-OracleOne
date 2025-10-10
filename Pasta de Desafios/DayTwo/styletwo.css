@@ -6,6 +6,7 @@
 
 *{
     padding:0;
+    margin: 0;
 }
 
 .cabecalho{
@@ -34,7 +35,6 @@
 }
 
 body{
-    margin: 0 3%;
     background-color: black;
     color: #F0F8FF;
     display: flex;
@@ -167,6 +167,8 @@ body{
     font-family: var(--font-basica);
     font-size: 1.2rem;
     font-weight: 200;
+
+    cursor: pointer;
 }
 
 .escopo__cadastro__butoes__botao:hover{
@@ -174,8 +176,19 @@ body{
     background-color: aqua;
 }
 
+.escopo__cadastro__butoes__botao.false{
+    transition: background-color 0s ease-in-out;
+    background-color: red;
+}
+
+.escopo__cadastro__butoes__botao.true{
+    transition: background-color 0s ease-in-out;
+    background-color: green;
+}
+
 .escopo__cadastro__butoes__botao:disabled:hover{
     background-color: white;
+    cursor:default;
 }
 
 .escopo__fundo{
@@ -186,12 +199,11 @@ body{
 }
 
 .rodape{
-    position: absolute;
-    bottom: 0;
+    margin-top: 6%;
     text-align: center;
     background-color: #739EC9;
     color: #000000;
-    padding: 5px;
+    padding: 25px;
     width: 100%;
     font-size: 1.25rem;
     font-family: var(--font-basica);

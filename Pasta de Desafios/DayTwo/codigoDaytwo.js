@@ -3,6 +3,9 @@ let nome ="Ninguém";
 let idade = 0;
 let programacao = "nenhum";
 
+const botaoEntrada = document.getElementById("butaoEntrada");
+const botaoReiniciar = document.getElementById("butaoReiniciar");
+
 function acao(){
     let entrada = document.getElementById("entrada");
     if (cont == 0){
@@ -11,10 +14,12 @@ function acao(){
             mostrarVariavel("Nome",nome);
             alterarText("Quantos anos você tem?", "Digite sua idade...");
             document.getElementById("butaoReiniciar").removeAttribute("disabled");
+            clickFalse(botaoEntrada, 'true');
             cont++;
         }
         else{
             alterarText("Por favor, digite um nome.","Digite seu nome...");
+            clickFalse(botaoEntrada, 'false');
         }
     }
     else if(cont == 1){
@@ -22,11 +27,13 @@ function acao(){
         idade = parseInt(idade);
         if (isNaN(idade)){
             alterarText("Por favor, insira um número inteiro.","Digite sua idade...");
+            clickFalse(botaoEntrada, 'false');
         }
         else{
             mostrarVariavel("Idade",idade);
             alterarText("Qual linguagem de programação você está estudando?", "Digite a linguagem.");
             cont++;
+            clickFalse(botaoEntrada, 'true');
         }
     }
     else if(cont == 2){
@@ -37,9 +44,11 @@ function acao(){
             alterarText(texto,"Desabilitado");
             entrada.setAttribute("disabled",true);
             document.getElementById("butaoEntrada").setAttribute("disabled", true);
+            clickFalse(botaoEntrada, 'true');
         }
         else{
             alterarText("Por favor, insira uma linguagem","Digite a linguagem.");
+            clickFalse(botaoEntrada, 'false');
         }
     }
 }
@@ -57,6 +66,10 @@ function mostrarVariavel(talVariavel, amostragem){
     textoVariavel.innerHTML=amostragem;
 }
 
+function clickFalse(botao, cor){
+    botao.classList.add(cor);
+    setTimeout(function(){botao.classList.remove(cor)}, 100);
+}
 
 function reiniciar(){
     cont = 0;
@@ -66,9 +79,12 @@ function reiniciar(){
     mostrarVariavel("Nome",nome);
     mostrarVariavel("Idade",idade);
     mostrarVariavel("Linguagem",programacao);
-    document.getElementById("butaoReiniciar").setAttribute("disabled", true);
+    clickFalse(botaoReiniciar, 'true');
+    //Dar tempo da troca de cor ocorrer
+    setTimeout(function(){
+        document.getElementById("butaoReiniciar").setAttribute("disabled", true);
+    },100);
     document.getElementById("butaoEntrada").removeAttribute("disabled");
     document.getElementById("entrada").removeAttribute("disabled");
     alterarText("Qual o seu nome?", "Digite o seu nome...");
-    
 }
