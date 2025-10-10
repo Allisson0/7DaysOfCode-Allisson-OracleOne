@@ -4,6 +4,8 @@ const escLaticineos = document.getElementById("laticineos");
 const escCongelados = document.getElementById("congelados");
 const escDoces = document.getElementById("doces");
 const escOutros = document.getElementById("outros");
+const logoDiv = document.getElementById("logoDiv");
+const imgLista = document.getElementById("logoLista");
 
 const listaEscolhasHTML = [escFruta, escLaticineos, escCongelados, escDoces, escOutros];
 
@@ -67,7 +69,13 @@ let listaOutros=[
     ['TV', 5000]
 ];
 
-let listaEscolhas = [listaFrutas, listaLaticineos, listaCongelados, listaDoces, listaOutros];
+//Cria uma relação entre lista array e a imagem png correspondente (para o site)
+let listaEscolhas = [
+    [listaFrutas, "logoFruta.png"], 
+    [listaLaticineos, "logoLaticineos.png"], 
+    [listaCongelados, "logoCongelados.png"], 
+    [listaDoces, "logoDoces.png"], 
+    [listaOutros, "logoOutros.png"]];
 
 //Loja
 //Funcoes de escolha das frutas atraves do clique do botao
@@ -79,7 +87,10 @@ function escolha(botaoPressionado){
     let botPress = Number(botaoPressionado.value);
     if(esc!=botPress){
         esc=botPress;
-        preencherLoja(listaEscolhas[botPress-1]);
+        //Preenche a loja com base na escolha
+        preencherLoja(listaEscolhas[botPress-1][0]);
+        //Insere uma logo com base na lista escolhida
+        habLogoLista(true, listaEscolhas[botPress-1][1]);
         //adiciona uma seleção visual ao botão e remove dos demais
         escolheBotao(botPress);
         //Remove o estado de fechado para a lista se expandir
@@ -89,6 +100,8 @@ function escolha(botaoPressionado){
         esc = 0;
         //Remove a seleção visual do botão
         listaEscolhasHTML[botPress-1].classList.remove("ativo");
+        //Desabilita a imagem das listas da loja
+        habLogoLista(false);
         //Adiciona o estado de fechado para a lista se recolher
         listaHTML.classList.add("fechado");
     }
@@ -150,6 +163,17 @@ function escolheBotao(valorBotaoEscolhido){
         else{
             listaEscolhasHTML[i].classList.remove("ativo");
         }
+    }
+}
+
+//Habilita diferentes logos para a imagem das listas
+function habLogoLista(hab, logo){
+    if (hab){
+        imgLista.src = "../../Assets/LogosLista/"+logo;
+        logoDiv.style.display = "inline-block";
+    }
+    else{
+        logoDiv.style.display = "none";
     }
 }
 
@@ -370,6 +394,7 @@ function reiniciar(){
     listaCarrinho = [];
     atualizarCarrinhoHTML();
     listaHTML.classList.add("fechado");
+    habLogoLista(false);
     esc = 0;
     for (i=0; i<listaEscolhasHTML.length; i++){
         listaEscolhasHTML[i].classList.remove('ativo');
