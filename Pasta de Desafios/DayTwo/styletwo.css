@@ -243,4 +243,12 @@ body{
     .rodape{
         margin-top: 5%;
     }
+
+    .escopo__verVariavel__retorno__variavel{
+        width: 120px;
+    }
+
+    .escopo__cadastro__texto{
+        width: 180px;
+    }
 }
