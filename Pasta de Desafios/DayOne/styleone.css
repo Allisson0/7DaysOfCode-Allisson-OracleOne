@@ -5,6 +5,17 @@
     padding: 0;
 }
 
+body{
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* max-width: 100%; */
+    min-height: 100dvh;
+}
+
 .cabecalho{
     display: flex;
     justify-content: center;
@@ -27,27 +38,23 @@
     padding: 15px 20px;
     text-decoration: none;
     color:#F0F8FF;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-family: "urbana", sans-serif;
     font-weight: 300;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    background-color: black;
-    color: white;
+.corpo__texto{
+    margin: 0 5%;
 }
 
-h1{
+.corpo__texto__titulo{
     font-family: "urbana", sans-serif;
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
-h2{
+.corpo__texto__texto{
     font-family: "urbana", sans-serif;
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: 300;
 }
 
@@ -99,7 +106,7 @@ img:hover{
     border: 0;
     transition: transform 0.3s ease-in-out;
     font-family: "urbana", sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 300;
 }
 
@@ -113,7 +120,7 @@ img:hover{
     border-radius: 10px;
     border: 0;
     font-family: "century-gothic", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .corpo__verificar{
@@ -125,10 +132,9 @@ img:hover{
 }
 
 .corpo__verificar__texto{
-    font-size: 20px;
     font-weight: 100;
     font-family: "urbana", sans-serif;
-    font-size: 25px;
+    font-size: 1.5625rem;
     font-weight: 500;
 }
 
@@ -138,9 +144,9 @@ img:hover{
     background-color: #F0F8FF;
     border: 0;
     border-radius: 20px;
-    transition: transform 0.5s ease-in-out, background-color 0,1s ease-out;
+    transition: transform 0.5s ease-in-out, background-color 0,5s ease-out;
     font-family: "urbana", sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
@@ -148,13 +154,17 @@ img:hover{
     transform: scale(1.07);
 }
 
-.corpo__verificar__botao:active{
+.corpo__verificar__botao.false{
     background-color: red;
+}
+
+.corpo__verificar__botao.true{
+    background-color: green;
 }
 
 .corpo__verificar__resultado{
     font-family: "urbana", sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 300;
     height: 4vh;
 }
@@ -170,7 +180,6 @@ img:hover{
 }
 
 .rodape{
-    margin-top: 0.84%;
     text-align: center;
     background-color: #739EC9;
     color: #000000;
@@ -179,4 +188,26 @@ img:hover{
     font-size: 1.25rem;
     font-family: "urbana", sans-serif;
     box-sizing: border-box;
+}
+
+@media(max-width: 880px){
+    .corpo__escolhas__botoes{
+        margin: 0;
+    }
+}
+
+@media(max-width: 660px){
+    .corpo__escolhas{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .corpo__verificar__resultado{
+        margin: 0 10%;
+        height: 80px;
+    }
+
+    .rodape{
+        margin-top: 5%;
+    }
 }

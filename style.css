@@ -6,13 +6,9 @@
 }
 
 body{
-    /* height: 100%; */
     background-color: black;
     color: white;
     box-sizing: border-box;
-}
-
-.divisor{
     display: flex;
     flex-direction: column;
     justify-content: space-between;

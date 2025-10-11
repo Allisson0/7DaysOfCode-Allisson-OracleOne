@@ -7,6 +7,8 @@ let preench2 = false;
 const corBotaoOcioso = "#F0F8FF";
 const corBotaoSelec = "#33A1E0";
 
+const botVerificar = document.getElementById("botaoVerificar");
+
 function esqString(){
     preench1 = true;
     valorInteiro1 = false;
@@ -51,16 +53,30 @@ function trocarCor(id1, id2, cor1, cor2){
     botaoInt.style.backgroundColor = cor2;
 }
 
+
 function verificaPreenchimento(numero1, numero2){
     if(numero1 === '' || numero2 === ''){
         escrever("Por favor, insira valores nos campos antes de comparar.");
+        
+        addCor(botVerificar, 'false');
+        
         return false;
     }
     if(preench1 == false || preench2 == false){
         escrever("Por favor, defina os tipos das variaveis.");
+        
+        addCor(botVerificar, 'false');
+
         return false;
     }
     return true;
+}
+
+function addCor(botao, cor){
+    botao.classList.add(cor);
+        setTimeout(function(){
+            botao.classList.remove(cor);
+        }, 100)
 }
 
 function comparacao(){
@@ -86,8 +102,10 @@ function escrever(texto){
 function comparar(){
     num1 = tipoValor("num1", valorInteiro1);
     num2 = tipoValor("num2", valorInteiro2);
-    console.log(num1, num2);
     if(verificaPreenchimento(num1, num2)){
+
+        addCor(botVerificar, 'true');
+
         escrever("");
         let comparacaoResultado = "";
         comparacaoResultado = comparacao();

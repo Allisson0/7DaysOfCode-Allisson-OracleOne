@@ -9,7 +9,24 @@
     margin: 0;
 }
 
+body{
+    background-color: black;
+    color: #F0F8FF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+
+    justify-content: space-between;
+
+    max-width: 100%;
+    min-height: 100dvh;
+}
+
 .cabecalho{
+    display: flex;
+    justify-content: center;
     margin: 2% 0 2% 0;
 }
 
@@ -34,18 +51,8 @@
     font-weight: 300;
 }
 
-body{
-    background-color: black;
-    color: #F0F8FF;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    box-sizing: content-box;
-}
-
 .boasvindas{
-    margin: 2% 0;
+    margin: 3% 0;
 }
 
 .boasvindas__titulo{
@@ -199,7 +206,6 @@ body{
 }
 
 .rodape{
-    margin-top: 6%;
     text-align: center;
     background-color: #739EC9;
     color: #000000;
@@ -208,4 +214,33 @@ body{
     font-size: 1.25rem;
     font-family: var(--font-basica);
     box-sizing: border-box;
+}
+
+@media(max-width: 810px){
+    .boasvindas{
+        margin: 0 5%;
+    }
+
+    .corpo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .escopo{
+        flex-direction: column;
+        align-items:  center;
+        justify-content: center;
+        margin: 1% 0;
+        gap: 20px;
+        width: 70%;
+    }
+
+    .escopo__fundo{
+        margin: 0 10%;
+    }
+
+    .rodape{
+        margin-top: 5%;
+    }
 }
