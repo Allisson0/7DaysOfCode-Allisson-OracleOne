@@ -16,6 +16,7 @@ let fullstack = true;
 function BotaoEsquerdo(){
     //Escolhas
     if (cont == 0){
+        alterarCorBotao(botaoEsquerdo, 'piscarGreen');
         // Escolheu Front-End
         tipoDeDev = 'Front-End';
         cont++;
@@ -23,6 +24,7 @@ function BotaoEsquerdo(){
         alterarTextos(texto, 'React', 'Vue');
     }
     else if (cont == 1){
+        alterarCorBotao(botaoEsquerdo, 'piscarGreen');
         if(tipoDeDev == 'Front-End'){
             // Escolheu React
             tecnologias = 'React';
@@ -30,8 +32,8 @@ function BotaoEsquerdo(){
         }
         else if(tipoDeDev == 'Back-End'){
             // Escolheu C#
-        tecnologias = 'C#';
-        cont++;
+            tecnologias = 'C#';
+            cont++;
         }
         let texto = "Você quer se <strong class='escopo__escolhas__texto__strong'>especializar</strong> ou se tornar <strong class='escopo__escolhas__texto__strong'>fullstack</strong>?";
         alterarTextos(texto, 'Especializar', 'Fullstack');
@@ -39,6 +41,7 @@ function BotaoEsquerdo(){
     else if(cont==2){
         // Escolheu seguir se especializando
         fullstack = false;
+        alterarCorBotao(botaoEsquerdo, 'piscarGreen');
         cont++;
         texto = 'Quais tecnologias você gostaria de conhecer ou de se especializar?';
         alterarTextos(texto, 'Adicionar', 'Finalizar');
@@ -49,10 +52,8 @@ function BotaoEsquerdo(){
         let tec = input.value;
         if (tec!==''){
             //dá um efeito de piscar em verder
-            botaoEsquerdo.classList.add('piscarGreen');
-            setTimeout(function(){
-                botaoEsquerdo.classList.remove('piscarGreen');
-            }, 100);
+            alterarCorBotao(botaoEsquerdo, 'piscarGreen');
+
             var listaTecnologia = document.createElement('li');
             listaTecnologia.textContent=tec;
             listaTecnologia.classList.add('escolha__escolhas__lista__conteudo');
@@ -61,10 +62,7 @@ function BotaoEsquerdo(){
         }        
         else{
             //dá um efeito de piscar em vermelho
-            botaoEsquerdo.classList.add('piscarRed');
-            setTimeout(function(){
-                botaoEsquerdo.classList.remove('piscarRed');
-            }, 100);
+            alterarCorBotao(botaoEsquerdo, 'piscarRed');
         }
     }
 }
@@ -73,6 +71,7 @@ function BotaoEsquerdo(){
 function BotaoDireito(){
     //Escolhas
     if (cont == 0){
+        alterarCorBotao(botaoDireito, 'piscarGreen');
         // Escolheu Back-End
         tipoDeDev = 'Back-End';
         cont++;
@@ -80,6 +79,7 @@ function BotaoDireito(){
         alterarTextos(texto, 'C#', 'Java');
     }
     else if (cont == 1){
+        alterarCorBotao(botaoDireito, 'piscarGreen');
         if(tipoDeDev == 'Front-End'){
             // Escolheu Vue
             tecnologias = 'Vue';
@@ -96,12 +96,14 @@ function BotaoDireito(){
     else if(cont==2){
         // Escolheu se tornar fullstack
         fullstack = true;
+        alterarCorBotao(botaoDireito, 'piscarGreen');
         cont++;
         texto = 'Quais tecnologias você gostaria de conhecer ou de se especializar?';
         alterarTextos(texto, 'Adicionar', 'Finalizar');
         input.style.display='flex';
     }
     else if(cont==3){
+        alterarCorBotao(botaoDireito, 'piscarGreen');
         // Escolheu finalizar.
         if(lista.children.length==0){
             var listaTecnologia = document.createElement('li');
@@ -137,15 +139,25 @@ function alterarTextos(texto, leftButton, rightButton){
     botaoDireito.innerHTML = rightButton;
 }
 
+function alterarCorBotao(botao, cor){
+    botao.classList.add(cor);
+    setTimeout(function(){
+        botao.classList.remove(cor);
+    }, 100);
+}
+
 //Reinicia o jogo inteiro
 function reiniciar(){
+    alterarCorBotao(botaoReiniciar, 'piscarGreen');
     cont = 0;
     texto = 'Você quer seguir para a área de <strong class="escopo__escolhas__texto__strong">Front-End</strong> ou de <strong class="escopo__escolhas__texto__strong">Back-End</strong>?'
     alterarTextos(texto, 'Front-End', 'Back-End');
-    // Reinicia o formato dos botões.
-    botaoDireito.style.display = 'inline-block';
-    botaoEsquerdo.style.display = 'inline-block';
-    botaoReiniciar.style.display = 'none';
-    textoPrincipal.style.fontSize = '1.5rem';
-    lista.innerHTML = '';
+    setTimeout(function(){
+        // Reinicia o formato dos botões.
+        botaoDireito.style.display = 'inline-block';
+        botaoEsquerdo.style.display = 'inline-block';
+        botaoReiniciar.style.display = 'none';
+        textoPrincipal.style.fontSize = '1.5rem';
+        lista.innerHTML = '';
+    }, 200);
 }

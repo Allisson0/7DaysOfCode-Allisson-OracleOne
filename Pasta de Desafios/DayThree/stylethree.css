@@ -13,6 +13,22 @@
     margin: 0;
 }
 
+body{
+    background-color: var(--cor-terciaria);
+    color: var(--cor-principal);
+    display: flex;
+    text-align: center;
+    box-sizing: content-box;
+}
+
+.divisor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100dvh;
+    width: 100%;
+}
+
 .cabecalho{
     display: flex;
     justify-content: center;
@@ -38,16 +54,6 @@
     font-family: var(--fonte-primaria);
     font-size: 1.2rem;
     font-weight: 300;
-}
-
-body{
-    background-color: var(--cor-terciaria);
-    color: var(--cor-principal);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    box-sizing: content-box;
 }
 
 .escopo{
@@ -202,14 +208,49 @@ body{
     background-color: var(--cor-quartenaria);
 }
 
+.escopo__escolhas__reiniciar.piscarGreen{
+    transition: background-color 0s ease-in-out;
+    background-color: green;
+}
+
 .rodape{
-    margin-top: 10%;
     text-align: center;
     background-color: var(--cor-rodape);
     color: var(--cor-terciaria);
-    padding: 25px;
+    padding: 25px 0;
     width: 100%;
     font-size: 1.25rem;
     font-family: var(--fonte-primaria);
     box-sizing: border-box;
+}
+
+.rodape__texto{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media(max-width: 500px){
+    .escopo{
+        margin: 0;
+    }
+
+    .escopo__apresentacao__texto{
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    .escopo__escolhas__lista{
+        width: 300px;
+    }
+
+    .rodape{
+        margin-top: 10%;
+    }
+}
+
+@media(max-width: 350px){
+    .escopo__escolhas__lista{
+        width: 250px;
+    }
 }
