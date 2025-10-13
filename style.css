@@ -83,7 +83,7 @@ h5{
 
 .corpo__base__botoes__botao{
     flex-grow: 2;
-    flex-basis: 200;
+    flex-basis: 160px;
 
     display: inline-block;
     min-width: 160px;
