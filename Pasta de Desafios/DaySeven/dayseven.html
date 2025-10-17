@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day Seven</title>
+        <link rel="stylesheet" href="styleSeven.css">
+    </head>
+    <body>
+        <div id="wrapper">
+
+        <header class="cabecalho">
+            <nav class="cabecalho__nav">
+                <a class="cabecalho__nav__texto" href="../../index.html">Voltar à página inicial</a>
+            </nav>
+        </header>
+        <main class="escopo">
+            <section class="escopo__apresentacao">
+                <h1 class="escopo__apresentacao__titulo">Day Seven - <strong>Funções em JavaScript</strong></h1>
+                <p class="escopo__apresentacao__texto">
+                    <strong>Funções</strong> são partes do código onde podemos chamar mais de uma vez, sem a necessidade
+                    de escrevermos todas as linhas novamente no código. Elas podem ou não ter retorno de um valor.
+                    Por exemplo, se quisermos verificar mais de uma vez no código, se um número é ou não negativo, podemos criar
+                    uma função de verificaNumeroNegativo() e passar um parâmetro a ser recebido dentro dela com verificaNumeroNegativo(numero).
+                    Assim, podemos fazer nossa verificação do número dentro desta função. E darmos um retorno com base na condição satisfeita,
+                    com return "É negativo" ou return "É positivo". O return, serve para devolvermos um resultado à ação que chamou a função.
+                    Por exemplo:<br> let num1 = -1 e let num2 = 2. Podemos printar isto na tela com console.log(verificaNumeroNegativo(num1));<br>
+                    O resultado sairá com base no return que dermos ao nosso código dentro da função. O retorno pode ser de qualquer variável. 
+                    <br>Vale ressaltar a importância de analisarmos a documentação de como uma função na nossa linguagem é definida. 
+                    Em JavaScript é assim: function funcao ( ) { }.
+                 </p>
+                 <p class="escopo__apresentacao__exemplo">
+                    Para exemplificarmos, utilizaremos uma <strong>Calculadora</strong> com várias funções diferentes.
+                </p>
+            </section>
+            <section class="escopo__calculadora">
+                <p class="escopo__calculadora__texto">Calculadora</p>
+                <div class="Calculadora">
+                    <div class="escopo__calculadora__tela">
+                        <label class="escopo__calculadora__tela__texto" id="telaCalculadora">Calc. 3.000</label>
+                    </div>
+                    <div class="escopo__calculadora__botoes">
+                        <div class="escopo__calculadora__botoes_apagar">
+                            <button class="escopo__calculadora__botoes_apagar__botao" id="botaoLimpa" onclick="limpar()">Limpar</button>
+                            <button class="escopo__calculadora__botoes_apagar__botao" id="botaoApaga" onclick="apagar()">Apagar</button>
+                        </div>
+
+                        <div class="escopo__calculadora__botoes_numerico">
+                            <button class="escopo__calculadora__botoes_numerico entrada" value="7" onclick="digitar(this)">7</button>
+                            <button class="escopo__calculadora__botoes_numerico entrada" value="8" onclick="digitar(this)">8</button>
+                            <button class="escopo__calculadora__botoes_numerico entrada" value="9" onclick="digitar(this)">9</button>
+                            <button class="escopo__calculadora__botoes_numerico acao" value="/" onclick="acao(this)">/</button>
+                        </div>
+
+                        <div class="escopo__calculadora__botoes_numerico">
+                            <button class="escopo__calculadora__botoes_numerico entrada" value="4" onclick="digitar(this)">4</button>
+                            <button class="escopo__calculadora__botoes_numerico entrada" value="5" onclick="digitar(this)">5</button>
+                            <button class="escopo__calculadora__botoes_numerico entrada" value="6" onclick="digitar(this)">6</button>
+                            <button class="escopo__calculadora__botoes_numerico acao" value="x" onclick="acao(this)">x</button>
+                        </div>
+
+                        <div class="escopo__calculadora__botoes_numerico">
+                            <button class="escopo__calculadora__botoes_numerico entrada" value="1" onclick="digitar(this)">1</button>
+                            <button class="escopo__calculadora__botoes_numerico entrada" value="2" onclick="digitar(this)">2</button>
+                            <button class="escopo__calculadora__botoes_numerico entrada" value="3" onclick="digitar(this)">3</button>
+                            <button class="escopo__calculadora__botoes_numerico acao" value="-" onclick="acao(this)">-</button>
+                        </div>
+
+                        <div class="escopo__calculadora__botoes_numerico">
+                            <button class="escopo__calculadora__botoes_numerico entrada" value="." onclick="pontuar(this)">.</button>
+                            <button class="escopo__calculadora__botoes_numerico entrada" value="0" onclick="digitar(this)">0</button>
+                            <button class="escopo__calculadora__botoes_numerico entrada" id="botaoIgual" onclick="verificar()">=</button>
+                            <button class="escopo__calculadora__botoes_numerico acao" value="+" onclick="acao(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        </div>
+
+        <footer class="rodape">
+            <p class="rodape__texto">Desenvolvido por Allisson Silva.</p>
+        </footer>
+
+        <script src="codigoDaySeven.js" defer></script>
+    </body>
+</html>
