@@ -222,11 +222,11 @@ body{
 .escopo__calculadora__botoes__numerico{
     display: flex;
     width: 100%;
-    gap: 10px
+    gap: 5px;
 }
 
 .escopo__calculadora__botoes__numerico.entrada{
-    width: 100px;
+    width: 45px;
     height: 30px;
     text-align: center;
     font-family: var(--fonte-primaria);
@@ -243,8 +243,12 @@ body{
     transform: scale(1.05);
 }
 
+.escopo__calculadora__botoes__numerico.entrada:hover{
+    border: solid 1px var(--cor-terciaria);
+}
+
 .escopo__calculadora__botoes__numerico.acao{
-    width: 80px;
+    width: 45px;
     height: 30px;
     text-align: center;
     font-family: var(--fonte-primaria);
@@ -256,15 +260,17 @@ body{
     cursor: pointer;
 }
 
+.escopo__calculadora__botoes__numerico.acao:hover{
+    border: solid 1px var(--cor-terciaria);
+}
+
 .escopo__calculadora__botoes__numerico.acao:active{
     background-color: green;
     transform: scale(1.05);
 }
 
 button{
-    display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
 }
 
