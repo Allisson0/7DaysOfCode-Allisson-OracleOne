@@ -261,6 +261,12 @@ body{
     transform: scale(1.05);
 }
 
+button{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
 
 .rodape{
     flex-shrink: 0;
