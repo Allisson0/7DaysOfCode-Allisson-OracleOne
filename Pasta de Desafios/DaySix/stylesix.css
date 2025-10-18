@@ -20,6 +20,9 @@ body{
 
     scrollbar-color: var(--cor-principal) var(--cor-terciaria);
     scrollbar-width: thin;
+
+    width: 100%;
+    min-height: 100dvh;
 }
 
 html::-webkit-scrollbar {
@@ -110,13 +113,13 @@ html::-webkit-scrollbar-thumb:hover {
 
 .escopo__apresentacao__texto{
     font-family: var(--fonte-primaria);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 200;
     line-height: 1.3;
 }
 
 .escopo__apresentacao__texto strong{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--cor-rodape);
 }
@@ -138,7 +141,7 @@ html::-webkit-scrollbar-thumb:hover {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 700px;
+    width: 70%;
     align-items: center;
 }
 
@@ -154,6 +157,8 @@ html::-webkit-scrollbar-thumb:hover {
 
 .escopo__loja__seccoes{
     margin-top: 10px;
+    width: 100%;
+    justify-content: center;
     display: flex;
     gap: 33px;
     margin-bottom: 10px;
@@ -164,7 +169,7 @@ html::-webkit-scrollbar-thumb:hover {
     font-size: 1.2rem;
     font-weight: 400;
 
-    width: 100px;
+    min-width: 100px;
     height: 30px;
 
     border: solid 2px var(--cor-principal);
@@ -191,7 +196,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 .escopo__loja__logo{
     margin: 2% 0;
-    width: 20%;
+    width: 150px;
     height: 120px;
     display:none;
     align-items: center;
@@ -224,7 +229,7 @@ html::-webkit-scrollbar-thumb:hover {
     list-style-type: none;
     padding-left: 0;
     gap: 15px;
-    width: 450px;
+    min-width: 450px;
     max-height: 1000px;
     opacity: 1;
     overflow: hidden;
@@ -312,7 +317,7 @@ html::-webkit-scrollbar-thumb:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 700px;
+    width: 80%;
     gap: 15px;
 }
 
@@ -495,4 +500,73 @@ html::-webkit-scrollbar-thumb:hover {
 
     padding: 25px;
     margin-top: 40px;
+}
+
+
+@media(max-width: 702px){
+    .escopo{
+        margin: 0 1%;
+    }
+
+    .escopo__loja__seccoes{
+        gap: 10px;
+    }
+}
+
+@media(max-width: 550px){
+
+    .escopo{
+        margin: 0;
+    }
+
+    .escopo__apresentacao{
+        margin: 0 15px;
+    }
+
+    .escopo__loja__seccoes{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .escopo__loja__seccoes__botao{
+        min-width: 180px;
+    }
+
+    .escopo__loja__lista{
+        min-width: 50%;
+        gap: 10px;
+    }
+
+    .escopo__carrinho__lista{
+        margin: 0;
+        width: 350px;
+    }
+
+    .escopo__loja__lista__item{
+        padding: 0 10px;
+    }
+
+}
+
+@media(max-width: 370px){
+    .escopo__loja__lista{
+        width: 300px;
+        gap: 10px;
+    }
+
+    .escopo__carrinho__lista{
+        width: 300px;
+    }
+
+    .escopo__carrinho__lista__item{
+        padding: 5px;
+    }
+
+    .escopo__carrinho__lista__item__casaQtd{
+        width: 60px;
+    }
+
+    .escopo__carrinho__lista__item__casaQtd__qtd{
+        width: 40px;
+    }
 }

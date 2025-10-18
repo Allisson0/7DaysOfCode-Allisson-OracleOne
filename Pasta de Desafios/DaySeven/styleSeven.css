@@ -120,7 +120,6 @@ body{
     flex-direction:column;
     align-items: center;
     margin: 10px;
-    width: 400px;
 }
 
 .escopo__calculadora__texto{
@@ -153,6 +152,7 @@ body{
     box-sizing: content-box;
 
     overflow-y: hidden;
+    overflow-x:none;
     flex-wrap: wrap;
 
     scrollbar-width: thin;

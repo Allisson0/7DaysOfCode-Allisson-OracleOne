@@ -14,6 +14,20 @@
     margin:0;
 }
 
+body{
+    background-color: var(--cor-terciaria);
+    color: var(--cor-principal);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: content-box;
+    width: 100%;
+    min-height: 100dvh;
+    justify-content: space-between;
+}
+
+
 .cabecalho{
     display: flex;
     justify-content: center;
@@ -41,16 +55,6 @@
     font-weight: 300;
 }
 
-body{
-    background-color: var(--cor-terciaria);
-    color: var(--cor-principal);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    box-sizing: content-box;
-}
-
 .escopo{
     margin: 0 10%;
     display: flex;
@@ -62,6 +66,7 @@ body{
     margin: 0.5% 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 5px;
 }
 
@@ -84,7 +89,6 @@ body{
     font-size: 1.3rem;
     line-height: 1.25;
     font-weight: 100;
-    max-height: 100px;
     padding:5px 0;
     margin: 0 30px;
 }
@@ -95,9 +99,10 @@ body{
 
 .escopo__apresentacao__tipos{
     display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin: 1% 0;
+    justify-content: space-evenly;
+    margin: 10px 0;
+    width: 80%;
+    align-items: center;
 }
 
 .escopo__apresentacao__tipos__botao{
@@ -106,6 +111,7 @@ body{
     color: var(--cor-terciaria);
 
     width: 90px;
+    min-width: 90px;
     border-radius: 10px;
     border: 0;
 
@@ -145,7 +151,7 @@ body{
     line-height: 1.5;
 
     padding: 0 10px;
-    margin: 0 150px;
+    margin: 0 10%;
 
     scrollbar-width: thin;
     scrollbar-color: var(--cor-principal) var(--cor-terciaria);
@@ -243,4 +249,21 @@ body{
     font-size: 1.25rem;
     font-family: var(--fonte-primaria);
     box-sizing: border-box;
+}
+
+@media (max-width: 590px){
+
+    .escopo{
+        margin: 0 2%;
+    }
+
+    .escopo__apresentacao__tipos{
+        flex-direction: column;
+        gap: 20px
+    }
+
+    .escopo__apresentacao__selecao{
+        max-height: 300px;
+    }
+    
 }
