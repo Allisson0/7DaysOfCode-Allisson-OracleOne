@@ -115,16 +115,148 @@ body{
     font-size: 1.8rem;
 }
 
+.escopo__calculadora{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin: 10px;
+    width: 400px;
+}
 
+.escopo__calculadora__texto{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 2rem;
 
+    margin: 0 0 20px 0;
 
+}
 
+#Calculadora{
+    width: 250px;
+    height: 320px;
+    background-color: #353535;
+    border-radius: 25px;
+    border: solid 10px #1A1A1A;
 
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
 
+.escopo__calculadora__tela{
+    display: flex;
+    margin-top: 20px;
+    box-sizing: content-box;
 
+    overflow-y: hidden;
+    flex-wrap: wrap;
 
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-principal) #8ED1DA;
 
+    width: 80%;
+    height: 70px;
+    text-align: left;
+    align-items: center;
+    background-color: #8ED1DA;
+    border-radius: 10px;
+}
 
+.escopo__calculadora__tela__texto{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    color:#1A1A1A;
+    font-size: 1.6rem;
+    margin: 0 10px 0 10px;
+}
+
+.escopo__calculadora__botoes{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+
+    
+}
+
+.escopo__calculadora__botoes__apagar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+
+.escopo__calculadora__botoes__apagar__botao{
+    font-size: 1.2rem;
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    transition: transform 0.5s ease-in-out;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+}
+
+.escopo__calculadora__botoes__apagar__botao.limpa{
+    background-color: #C44E52;
+}
+
+.escopo__calculadora__botoes__apagar__botao:hover{
+    border: solid 2px var(--cor-quartenaria);
+    transform: scale(1.05);
+}
+
+.escopo__calculadora__botoes__apagar__botao:active{
+    background-color: green;
+}
+
+.escopo__calculadora__botoes__numerico{
+    display: flex;
+    width: 100%;
+    gap: 10px
+}
+
+.escopo__calculadora__botoes__numerico.entrada{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    font-family: var(--fonte-primaria);
+    font-weight: 200;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    transition: transform 0.5s ease-in-out;
+}
+
+.escopo__calculadora__botoes__numerico.entrada:active{
+    background-color: green;
+    transform: scale(1.05);
+}
+
+.escopo__calculadora__botoes__numerico.acao{
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    font-family: var(--fonte-primaria);
+    font-weight: 200;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    border: none;
+    transition: transform 0.5s ease-in-out;
+}
+
+.escopo__calculadora__botoes__numerico.acao:active{
+    background-color: green;
+    transform: scale(1.05);
+}
 
 
 .rodape{
@@ -144,5 +276,5 @@ body{
     font-weight: 400;
 
     padding: 25px 0;
-    margin-top: 40px;
+    margin-top: 20px;
 }
