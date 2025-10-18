@@ -17,7 +17,13 @@ a fazer o desafio implementado elementos de HTML e CSS. Visto que fiz cursos na 
 <img width="1078" height="743" alt="image" src="https://github.com/user-attachments/assets/2eab2535-d381-45d4-8e18-96bca9657d1e" />
 <p>Visualização da página inicial - Acervo do site</p>
 
-<h2>Da visualização</h2>
+<h2>Da codifição:</h2>
+<p>
+  O código do projeto, foi criado majoritariamente por mim, com pequenos auxílios adaptados da IA (utilizado no projeto: Google GEMINI) em algumas sintaxes e lógicas do CSS. 
+  Entretanto, a lógica por trás das resoluções, a forma como se comunicaria com o HTML e aparência do site, foram criados apenas usando lógica e criatividade. Código disponível através deste repositório público online.
+</p>
+
+<h2>Da visualização:</h2>
 <p>Cada uma das sete páginas, remetem a cada um dos 7 desafios do projeto. Sendo eles:<br><br>
 <strong>1. Operações booleanas:</strong> que tratam sobre o tipo dos dados e condicionais que retornam um valor (true ou false). <br>
 Exemplo: comparação.<br><br>
@@ -69,11 +75,3 @@ Exemplo: calculadora<br>
 <h1>Link de acesso com site do App Vercell:</h1>
 <p>Para acesso ao site, subi ele em um servidor web integrado ao meu repositório do GitHub. Acesso em:</p>
 <a href="https://7daysofcodeallisson.vercel.app">7DayOfCode Allisson-Silva</a>
-
-<h2>Da codifição:</h2>
-<p>
-  O código do projeto, foi criado majoritariamente por mim, com pequenos auxílios da IA em algumas sintaxes do CSS. 
-  Entretanto, a lógica por trás das resoluções, a forma como se comunicaria com o HTML e aparência do site, foram criados apenas usando lógica e criatividade.
-  <br>
-  Código disponível através deste repositório público online.
-</p>
