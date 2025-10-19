@@ -152,7 +152,6 @@ body{
     box-sizing: content-box;
 
     overflow-y: hidden;
-    overflow-x:none;
     flex-wrap: wrap;
 
     scrollbar-width: thin;
@@ -172,6 +171,7 @@ body{
     color:#1A1A1A;
     font-size: 1.6rem;
     margin: 0 10px 0 10px;
+    white-space: nowrap;
 }
 
 .escopo__calculadora__botoes{
