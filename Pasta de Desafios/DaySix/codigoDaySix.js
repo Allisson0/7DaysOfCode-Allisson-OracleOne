@@ -189,11 +189,14 @@ function adicionarNoCarrinho(){
     let qtd = inputHTML.value;
     inputHTML.value = '';
 
-    //verifica se o valor não é 0 ou negativo
-    if(qtd <= 0 || isNaN(qtd)){
+    //verifica se o valor não é negativo ou inválido
+    if(qtd < 0 || isNaN(qtd)){
         addFalse(botao);
         return;
     }
+
+    //Se a quantidade for igual a 0, adiciona o item como qtd = 1
+    if (qtd == 0) { qtd = 1; }
 
     addTrue(botao);
 
